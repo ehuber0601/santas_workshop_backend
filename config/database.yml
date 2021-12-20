@@ -88,7 +88,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  url: <%= ENV["postgres://uebyuwipxidcpb:17302d899468cb29403ffeabd768603b266afb23324e39dd2704425e84441ccf@ec2-52-201-106-191.compute-1.amazonaws.com:5432/d1j2pstb2bc44k"] %>
   
 
 
