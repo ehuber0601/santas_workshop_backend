@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :carts
+  resources :products
   resource :users, only: [:create]
   post "/login", to: "users#login"
   get "/auto_login", to: "users#auto_login"
-  resources :carts
-  resources :products
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

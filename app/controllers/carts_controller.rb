@@ -1,9 +1,10 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: %i[ show update destroy ]
+  before_action :authorized
 
   # GET /carts
   def index
-    @carts = Cart.all
+    @carts = Cart.where user: @user.id
 
     render json: @carts
   end
@@ -16,6 +17,7 @@ class CartsController < ApplicationController
   # POST /carts
   def create
     @cart = Cart.new(cart_params)
+    @cart.user = @user.id
 
     if @cart.save
       render json: @cart, status: :created, location: @cart
