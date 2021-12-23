@@ -49,6 +49,6 @@
     - Footer
 
 ## Challenges
-- Took a while to depliy to heroku because I turned out I had to make ENV in database.yml DATABASE_URL instead of MY_DATABASE_URL
+- Took a while to deploy to heroku because I turned out I had to make ENV in database.yml DATABASE_URL instead of MY_DATABASE_URL
 - Couldn't get the User Auth to work on React so I had to abandon it and just go for MVP
 
